@@ -1,3 +1,10 @@
+// eslint-disable-next-line nuxt/no-cjs-in-config
+const path = require("path");
+
+// 绝对路径
+function resolve (dir) {
+  return path.join(__dirname, "", dir);
+}
 
 export default {
   /*
@@ -88,6 +95,20 @@ export default {
           },
         }, "vant"],
       ],
+    },
+    loaders: {
+      less: {
+        lessOptions: {
+          modifyVars: {
+            // 通过 modify.less 文件覆盖（文件路径为绝对路径）
+            hack: `true; @import "${resolve("assets/styles/modify.less")}";`,
+          },
+          globalVars: {
+            // 引用 theme.less 文件（文件路径为绝对路径）
+            hack: `true; @import "${resolve("assets/styles/theme.less")}";`,
+          },
+        },
+      },
     },
   },
 };
