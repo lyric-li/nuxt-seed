@@ -36,6 +36,7 @@ export default {
   */
   plugins: [
     { src: "~/plugins/amfe-flexible.js", mode: "client" },
+    { src: "~/plugins/vant.js" },
   ],
   /*
   ** Auto import components
@@ -76,5 +77,17 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    // 添加这个是关键，添加后babel才会处理依赖包vant里面的代码
+    transpile: [/vant.*?less/],
+    babel: {
+      plugins: [
+        ["import", {
+          "libraryName": "vant",
+          "style": (name) => {
+            return `${name}/style/less.js`;
+          },
+        }, "vant"],
+      ],
+    },
   },
 };
