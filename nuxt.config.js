@@ -35,6 +35,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: "~/plugins/amfe-flexible.js", mode: "client" },
   ],
   /*
   ** Auto import components
