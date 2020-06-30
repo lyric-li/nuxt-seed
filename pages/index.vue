@@ -35,15 +35,16 @@ export default {
 
 <style>
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .title {
+  display: block;
   font-family:
     'Quicksand',
     'Source Sans Pro',
@@ -54,19 +55,18 @@ export default {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  display: block;
-  font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  font-weight: 300;
   letter-spacing: 1px;
+  color: #35495e;
 }
 
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
   padding-bottom: 15px;
+  font-size: 42px;
+  font-weight: 300;
+  word-spacing: 5px;
+  color: #526488;
 }
 
 .links {
