@@ -119,9 +119,6 @@ export default {
           propList: ["*"],
         },
       },
-      preset: {
-        autoprefixer: {},
-      },
     },
   },
 };
