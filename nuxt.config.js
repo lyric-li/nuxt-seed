@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const path = require("path");
 
@@ -70,6 +72,8 @@ export default {
     "@nuxt/content",
     // Doc: https://github.com/nuxt-community/svg-sprite-module
     "@nuxtjs/svg-sprite",
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    ["@nuxtjs/dotenv", { filename: `.env.${process.env.APP_ENV}` }],
   ],
   /*
   ** Axios module configuration

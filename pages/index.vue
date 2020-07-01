@@ -23,20 +23,28 @@
           GitHub
         </a>
       </div>
+      <van-button type="primary">
+        <svg-icon
+          class="ns-svgicon"
+          name="nuxt"
+        />
+        主要按钮
+      </van-button>
+      <div>
+        <div>当前环境基础地址: {{ baseUrl }}</div>
+      </div>
     </div>
-    <van-button type="primary">
-      <svg-icon
-        class="ns-svgicon"
-        name="nuxt"
-      />
-      主要按钮
-    </van-button>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
+  computed: {
+    baseUrl () {
+      return process.env.BASE_URL;
+    },
+  },
 };
 </script>
 
