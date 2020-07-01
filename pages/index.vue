@@ -25,6 +25,10 @@
       </div>
     </div>
     <van-button type="primary">
+      <svg-icon
+        class="ns-svgicon"
+        name="nuxt"
+      />
       主要按钮
     </van-button>
   </div>
@@ -37,6 +41,11 @@ export default {
 </script>
 
 <style>
+.ns-svgicon {
+  width: 16px;
+  height: 16px;
+}
+
 .container {
   display: flex;
   min-height: 100vh;

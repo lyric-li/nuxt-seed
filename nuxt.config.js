@@ -68,6 +68,8 @@ export default {
     // "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt/content
     "@nuxt/content",
+    // Doc: https://github.com/nuxt-community/svg-sprite-module
+    "@nuxtjs/svg-sprite",
   ],
   /*
   ** Axios module configuration
