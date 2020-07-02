@@ -86,6 +86,13 @@ export default {
   */
   content: {},
   /*
+  ** Loading configuration
+  ** See https://nuxtjs.org/api/configuration-loading/
+  */
+  loading: {
+    color: "#15a4ac",
+  },
+  /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
