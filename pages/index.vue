@@ -23,14 +23,14 @@
           GitHub
         </a>
       </div>
-      <van-button type="primary" @click="$router.push('/about')">
-        <svg-icon
-          class="ns-svgicon"
-          name="nuxt"
-        />
-        主要按钮
-      </van-button>
-      <div>
+      <div class="demo">
+        <van-button type="primary" @click="$router.push('/about')">
+          <svg-icon
+            class="ns-svgicon"
+            name="nuxt"
+          />
+          主要按钮
+        </van-button>
         <div>当前环境基础地址: {{ baseUrl }}</div>
         <div>计数君: {{ counter }}</div>
       </div>
@@ -63,10 +63,18 @@ export default {
   height: 16px;
 }
 
+.demo {
+  margin-top: 8px;
+  text-align: left;
+}
+
 .container {
   display: flex;
-  min-height: 100vh;
+
+  /* min-height: 100vh; */
+  padding: 8px;
   margin: 0 auto;
+  font-size: 16px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -84,7 +92,7 @@ export default {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: 100px;
+  font-size: 48px;
   font-weight: 300;
   letter-spacing: 1px;
   color: #35495e;
