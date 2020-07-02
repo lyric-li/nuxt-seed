@@ -32,27 +32,28 @@
       </van-button>
       <div>
         <div>当前环境基础地址: {{ baseUrl }}</div>
+        <div>计数君: {{ counter }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "Index",
+  async fetch ({ store }) {
+    await store.dispatch("todo/increment");
+  },
   computed: {
+    ...mapState("todo", ["counter"]),
     baseUrl () {
       return process.env.BASE_URL;
     },
   },
-  head () {
-    return {
-      title: this.title,
-      meta: [
-        { hid: "description", name: "description", content: "My custom description" },
-      ],
-    };
-  },
+  // created () {
+  //   this.$store.dispatch("todo/increment");
+  // },
 };
 </script>
 
