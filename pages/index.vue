@@ -23,7 +23,7 @@
           GitHub
         </a>
       </div>
-      <van-button type="primary">
+      <van-button type="primary" @click="$router.push('/about')">
         <svg-icon
           class="ns-svgicon"
           name="nuxt"
@@ -39,11 +39,19 @@
 
 <script>
 export default {
-  name: "App",
+  name: "Index",
   computed: {
     baseUrl () {
       return process.env.BASE_URL;
     },
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: "description", name: "description", content: "My custom description" },
+      ],
+    };
   },
 };
 </script>

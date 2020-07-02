@@ -1,8 +1,25 @@
 <template>
   <div>
-    <Nuxt />
+    <Nuxt
+      :keep-alive-props="{
+        include: include
+      }"
+      keep-alive
+    />
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      include: [
+        "Index",
+      ],
+    };
+  },
+};
+</script>
 
 <style>
 html {
